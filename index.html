@@ -1,352 +1,167 @@
-<html><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-popover-popup].popover.top-left &gt; .arrow,[uib-popover-popup].popover.top-right &gt; .arrow,[uib-popover-popup].popover.bottom-left &gt; .arrow,[uib-popover-popup].popover.bottom-right &gt; .arrow,[uib-popover-popup].popover.left-top &gt; .arrow,[uib-popover-popup].popover.left-bottom &gt; .arrow,[uib-popover-popup].popover.right-top &gt; .arrow,[uib-popover-popup].popover.right-bottom &gt; .arrow,[uib-popover-html-popup].popover.top-left &gt; .arrow,[uib-popover-html-popup].popover.top-right &gt; .arrow,[uib-popover-html-popup].popover.bottom-left &gt; .arrow,[uib-popover-html-popup].popover.bottom-right &gt; .arrow,[uib-popover-html-popup].popover.left-top &gt; .arrow,[uib-popover-html-popup].popover.left-bottom &gt; .arrow,[uib-popover-html-popup].popover.right-top &gt; .arrow,[uib-popover-html-popup].popover.right-bottom &gt; .arrow,[uib-popover-template-popup].popover.top-left &gt; .arrow,[uib-popover-template-popup].popover.top-right &gt; .arrow,[uib-popover-template-popup].popover.bottom-left &gt; .arrow,[uib-popover-template-popup].popover.bottom-right &gt; .arrow,[uib-popover-template-popup].popover.left-top &gt; .arrow,[uib-popover-template-popup].popover.left-bottom &gt; .arrow,[uib-popover-template-popup].popover.right-top &gt; .arrow,[uib-popover-template-popup].popover.right-bottom &gt; .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
-</head>
-<body ng-app="app" class="ng-scope">
-  <div  class="ng-scope">
 
+  <html><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-popover-popup].popover.top-left &gt; .arrow,[uib-popover-popup].popover.top-right &gt; .arrow,[uib-popover-popup].popover.bottom-left &gt; .arrow,[uib-popover-popup].popover.bottom-right &gt; .arrow,[uib-popover-popup].popover.left-top &gt; .arrow,[uib-popover-popup].popover.left-bottom &gt; .arrow,[uib-popover-popup].popover.right-top &gt; .arrow,[uib-popover-popup].popover.right-bottom &gt; .arrow,[uib-popover-html-popup].popover.top-left &gt; .arrow,[uib-popover-html-popup].popover.top-right &gt; .arrow,[uib-popover-html-popup].popover.bottom-left &gt; .arrow,[uib-popover-html-popup].popover.bottom-right &gt; .arrow,[uib-popover-html-popup].popover.left-top &gt; .arrow,[uib-popover-html-popup].popover.left-bottom &gt; .arrow,[uib-popover-html-popup].popover.right-top &gt; .arrow,[uib-popover-html-popup].popover.right-bottom &gt; .arrow,[uib-popover-template-popup].popover.top-left &gt; .arrow,[uib-popover-template-popup].popover.top-right &gt; .arrow,[uib-popover-template-popup].popover.bottom-left &gt; .arrow,[uib-popover-template-popup].popover.bottom-right &gt; .arrow,[uib-popover-template-popup].popover.left-top &gt; .arrow,[uib-popover-template-popup].popover.left-bottom &gt; .arrow,[uib-popover-template-popup].popover.right-top &gt; .arrow,[uib-popover-template-popup].popover.right-bottom &gt; .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  </head>
+  <body ng-app="app" class="ng-scope">
 
-    <div>
-      Hello Chaitra !!
-    </div>
+  <div class="main-container">
+
+    <div class="row">
+    <nav style="background: #4a148c!important" class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container pull-left orange in">
+            <div class="navbar-header">
+
+              <a "href="#" style="font-size: 30px !important;padding-left:20px;" class="navbar-brand">Litmus Automation</a>
   </div>
-<div class="main-container">
+  <div>
+              <ul class="nav navbar-nav pull-right in">
+                          <li class="dropdown"><a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle active" href="#">Signed in as  <span class="caret"></span></a>
+                              <ul class="dropdown-menu in">
+                                  <li><a href="#" class="active">Change Password</a></li>
+                                  <li><a href="#" class="active">My Profile</a></li>
+                              </ul>
+                          </li>
+                          <li class=""><a href="/html/login.html" class="active">Logout</a></li>
+             </ul>
 
-  <div class="row">
-  <nav style="background: #4a148c!important" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container pull-left orange in">
-          <div class="navbar-header">
-
-            <a "href="#" style="font-size: 30px !important;padding-left:20px;" class="navbar-brand">Litmus Automation</a>
-</div>
-<div>
-            <ul class="nav navbar-nav pull-right in">
-                        <li class="dropdown"><a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle active" href="#">Signed in as  <span class="caret"></span></a>
-                            <ul class="dropdown-menu in">
-                                <li><a href="#" class="active">Change Password</a></li>
-                                <li><a href="#" class="active">My Profile</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="/html/login.html" class="active">Logout</a></li>
-           </ul>
+            </div>
 
           </div>
+        </nav>
+    </div>
 
-        </div>
-      </nav>
-  </div>
+    <div role="navigation" class="navbar-default sidebar in">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul id="side-menu" class="nav in">
+    					    <li>
+                                <a href="javascript:loadHomePage()"><i class="fa fa-edit fa-fw"></i>DashBoard</a>
+                            </li>
+    						<li>
+                                <a href="javascript:loadingPredictionFrames();"><i class="fa fa-edit fa-fw"></i>Where Am I Next ?</a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:loadingTimeline();"><i class="fa fa-bar-chart-o fa-fw"></i>Timeline<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+                                <!-- /.nav-second-level -->
+                            </li><li>
+                               <a href="#" class="active"><i class="fa fa-wrench fa-fw"></i> Statistics<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="javascript:loadingStat();">Daily</a>
+                                    </li>
+                                    <li>
+                                        <a href="buttons.html">Weekly</a>
+                                    </li>
+                                    <li>
+                                        <a href="notifications.html">Monthly</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="active"><i class="fa fa-files-o fa-fw"></i>Notifications<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="blank.html">Individual</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">Group</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+    						<li>
+                                <a href="#" class="active"><i class="fa fa-files-o fa-fw"></i>Keep List<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+                                <a href="login.html">Outside</a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="blank.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">Class</a>
+                                    </li>
+    								<li>
+                                        <a href="login.html">Library</a>
+                                    </li>
+    								<li>
+                                    </li>
+    								<li>
+                                        <a href="login.html">NearHome</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+     </div>
 
-  <div role="navigation" class="navbar-default sidebar in">
-                  <div class="sidebar-nav navbar-collapse">
-                      <ul id="side-menu" class="nav in">
-  					    <li>
-                              <a href="javascript:loadHomePage()"><i class="fa fa-edit fa-fw"></i>DashBoard</a>
-                          </li>
-  						<li>
-                              <a href="javascript:loadingPredictionFrames();"><i class="fa fa-edit fa-fw"></i>Where Am I Next ?</a>
-                          </li>
-                          <li class="active">
-                              <a href="javascript:loadingTimeline();"><i class="fa fa-bar-chart-o fa-fw"></i>Timeline<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
-                              <!-- /.nav-second-level -->
-                          </li>
-                          <li>
-                              <a href="#" class="active"><i class="fa fa-wrench fa-fw"></i> Statistics<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
-                              <ul class="nav nav-second-level collapse" aria-expanded="false">
-                                  <li>
-                                      <a href="javascript:loadingStat();">Daily</a>
-                                  </li>
-                                  <li>
-                                      <a href="buttons.html">Weekly</a>
-                                  </li>
-                                  <li>
-                                      <a href="notifications.html">Monthly</a>
-                                  </li>
-                              </ul>
-                          </li>
-                          <li>
-                              <a href="#" class="active"><i class="fa fa-files-o fa-fw"></i>Notifications<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
-                              <ul class="nav nav-second-level collapse" aria-expanded="false">
-                                  <li>
-                                      <a href="blank.html">Individual</a>
-                                  </li>
-                                  <li>
-                                      <a href="login.html">Group</a>
-                                  </li>
-                              </ul>
-                              <!-- /.nav-second-level -->
-                          </li>
-  						<li>
-                              <a href="#" class="active"><i class="fa fa-files-o fa-fw"></i>Keep List<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
-                              <ul class="nav nav-second-level collapse" aria-expanded="false">
-                                  <li>
-                                      <a href="blank.html">Home</a>
-                                  </li>
-                                  <li>
-                                      <a href="login.html">Class</a>
-                                  </li>
-  								<li>
-                                      <a href="login.html">Library</a>
-                                  </li>
-  								<li>
-                                      <a href="login.html">Outside</a>
-                                  </li>
-  								<li>
-                                      <a href="login.html">NearHome</a>
-                                  </li>
-                              </ul>
-                              <!-- /.nav-second-level -->
-                          </li>
-                      </ul>
+     <div style="min-height: 409px;" id="page-wrapper">
+  	<div id="contextify-frame">
+  	                 </div>
+  	<div id="dashboard-frame">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1 class="page-header">Dashboard</h1>
                   </div>
-                  <!-- /.sidebar-collapse -->
-   </div>
+                  <!-- /.col-lg-12 -->
+              </div>
+              <!-- /.row -->
+              <div class="row">
+                <div class="col-lg-3 col-md-6">
 
-   <div style="min-height: 409px;" id="page-wrapper">
-	<div id="contextify-frame">
-	                 </div>
-	<div id="dashboard-frame">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                 <!-- <i class="" id="currentStateImg"></i>  -->
-                                 <div id="currentStateImg" class="pull-right span5">
-		                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left"><b>Current State</b></span>
-                                <div><h1> <span class="medium" id="CurrentState"> </span></h1> </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                 <!-- <i class="" id="currentStateImg"></i>  -->
-                                 <div id="predCurrentStateImg" class="pull-right span5">
-		                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left"> Predicted Current State</span>
-                                <div><h1> <span class="medium" id="predCurrentState"></span></h1> </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3"></div>
-                                 <!-- <i class="" id="currentStateImg"></i>  -->
-                                 <div id="currentStateImg" class="pull-right span5"></div>
-                            </div>
-                            </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Predicted Next State</span>
-                                <div><h1> <span class="medium" id="predNextState"></span></h1> </div>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <!-- <div class="col-xs-3">
-                                   <i class="glyphicon glyphicon-globe huge"></i>
-                                </div> -->
-                                <div class="col-xs-12 text-left">
-                                    <h2> <span class="medium" id="CurrentTime"></span></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Current Time</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-8">
-                    <!--<div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> User's Timeline
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Duration
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Weekly</a>
-                                        </li>
-                                        <li><a href="#">Monthly</a>
-                                        </li>
-                                        <li><a href="#">Yearly</a>
-                                        </li>
-                                       <!--  <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.panel-heading
-                      
-                    <!-- /.panel -->
+<div class="panel panel-primary">
+<div class="panel-heading" ng-controller="test">Hello Chaitra:{{data}}</div>
+<div class="panel-body">Panel Content</div>
+</div>  </div>
+           <div class="col-lg-3 col-md-6">
 
-                    <!-- /.panel1 -->
+<div class="panel panel-primary">
+<div class="panel-heading">Panel with panel-primary class</div>
+<div class="panel-body">Panel Content</div>
+</div>
+           </div>
+           <div class="col-lg-3 col-md-6">
 
-                    <div class="panel panel-default" ng-controller="myCtrl">
+<div class="panel panel-primary">
+<div class="panel-heading">Panel with panel-primary class</div>
+<div class="panel-body">Panel Content</div>
+</div>
+           </div>
+           <div class="col-lg-3 col-md-6">
+
+<div class="panel panel-primary">
+<div class="panel-heading">Panel with panel-primary class</div>
+<div class="panel-body">Panel Content</div>
+</div>  </div>
+              </div>
+
+              <div class="panel panel-default" ng-controller="historicalBarChartCtrl">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i> Statistical Analysis
-
+                            {{valC}}
                         </div>
 
-                   <div ng-controller="myCtrl">
+                   <div ng-controller="historicalBarChartCtrl">
                           <nvd3 options="options" data="data"></nvd3>
                    </div>
 
 
-                    </div>
-                    <!-- /end of panel1 -->
-                      <!-- /start of panel2 -->
-
-                    <div class="panel panel-default" ng-controller="myCtrl">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Statistical Analysis
-
-                        </div>
-
-                   <div ng-controller="myCtrl">
-                          <nvd3 options="optionsData" data="dataSource2"></nvd3>
-                   </div>
-                 </div>
-
-                 <!-- /end of panel2-->
-                   <!-- /start of panel3 -->
-
-                    <div class="panel panel-default" ng-controller="myCtrl">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Statistical Analysis
-
-                        </div>
-
-                   <div ng-controller="myCtrl">
-                     <nvd3-historical-bar-chart
-   data="exampleData"
-   showXAxis="true"
-   showYAxis="true"
-   showLegend="true"
-   >
-</nvd3-historical-bar-chart>
-                   </div>
-
-
-                    </div>
-                    <!-- /end of panel3 -->
-
- <!--<div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Timeline
-                           <!-- <div class="pull-right">
-                                <!--<div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Today</a>
-                                        </li>
-                                        <li><a href="#">Weekly</a>
-                                        </li>
-                                        <li><a href="#">Monthly</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.panel-heading
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bell fa-fw"></i> Notifications Panel
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div id="listItems" class="list-group">
-                            </div>
-                            <!-- /.list-group -->
-                            <!-- <a href="#" class="btn btn-default btn-block">View All Alerts</a> -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                    <!--<div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-donut-chart"><svg height="347" version="1.1" width="294" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.75px;"><desc>Created with Rapha�l 2.2.0</desc><defs/><path style="opacity: 0;" fill="none" stroke="#0b62a4" d="M147,267.3333333333333A91.33333333333333,91.33333333333333,0,0,0,233.35180688739524,205.75135669275903" stroke-width="2" opacity="0"/><path style="" fill="#0b62a4" stroke="#ffffff" d="M147,270.3333333333333A94.33333333333333,94.33333333333333,0,0,0,236.1881801063243,206.72859103668176L271.8004216328778,218.99831113260063A132,132,0,0,1,147,308Z" stroke-width="3"/><path style="opacity: 1;" fill="none" stroke="#3980b5" d="M233.35180688739524,205.75135669275903A91.33333333333333,91.33333333333333,0,0,0,65.0802706076015,135.61515489624878" stroke-width="2" opacity="1"/><path style="" fill="#3980b5" stroke="#ffffff" d="M236.1881801063243,206.72859103668176A94.33333333333333,94.33333333333333,0,0,0,62.38947657646432,134.28864538554163L24.120405911402244,115.42273234437317A137,137,0,0,1,276.52771033109286,220.62703503913855Z" stroke-width="3"/><path style="opacity: 0;" fill="none" stroke="#679dc6" d="M65.0802706076015,135.61515489624878A91.33333333333333,91.33333333333333,0,0,0,146.97130678756912,267.33332882621403" stroke-width="2" opacity="0"/><path style="" fill="#679dc6" stroke="#ffffff" d="M62.38947657646432,134.28864538554163A94.33333333333333,94.33333333333333,0,0,0,146.97036430978855,270.33332867816995L146.95853097765465,307.99999348606116A132,132,0,0,1,28.60506262996421,117.63358152888509Z" stroke-width="3"/><text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 15px; font-weight: 800;" x="147" y="166" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="15px" stroke="none" fill="#000000" font-weight="800" transform="matrix(1.3815,0,0,1.3815,-56.2731,-66.7647)" stroke-width="0.7238442822384429"><tspan dy="5">In-Store Sales</tspan></text><text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 14px;" x="147" y="186" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" transform="matrix(1.9028,0,0,1.9028,-133.1597,-160.6944)" stroke-width="0.5255474452554745"><tspan dy="5">30</tspan></text></svg></div>
-                            <a href="#" class="btn btn-default btn-block">View Details</a>
-                        </div>
-                        <!-- /.panel-body
-                    </div>-->
-                    <!-- /.panel -->
-                        <!-- /.panel-footer -->
-                    </div>
-                    <!-- /.panel .chat-panel -->
-                </div>
-                <!-- /.col-lg-4 -->
-				</div>
-            </div>
-            <!-- /.row -->
-
-
-
-
+              </div>
+              <!-- /.row -->
+                      <!-- /.panel .chat-panel -->
+                  </div>
+                  <!-- /.col-lg-4 -->
+  				</div>
+              </div>
+              <!-- /.row -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
   <script src="/src/angular-paho.js"></script>
   <script src="/src/angular-paho.js"></script>
   <script src="/src/test.js"></script>
-
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-
   <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
