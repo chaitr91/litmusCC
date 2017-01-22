@@ -1,29 +1,30 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### litmuscc ###
 
-### What is this repository for? ###
+* Time-series Visualization with AngularJS front-end and Node.js backend.
+* Version-0.0.1
+* [Repository](https://chaitr91@bitbucket.org/chaitr91/litmuscc.git)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Usage ###
 
-### How do I get set up? ###
+* npm install
+* grunt build
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Dependencies ###
+* Important Note: Please Install mongodb running locally on Port No:27017;
+* Refer MongoDbReadme on the Repository for installation instructions.
 
-### Contribution guidelines ###
+### MQTT Broker ###
+* Locally implemented on mosca server.
+* Front-end subscribes to MQTT broker(channel:1885) by angular-paho.
+* Backend publisher to MQTT broker(channel:1885) by MQTTjs.
 
-* Writing tests
-* Code review
-* Other guidelines
+### About litmuscc ###
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Angualar-nvd3 chart used to give a time-series visualization.
+* Angualar-nvd3 chart continuously updated by receiving published data from MQTT broker.
+* Data is generated randomly.
+* Supports user authentication using PassportJs.
+* Backend Express Server sets up routes for front-end user authentication.
+* New  User Registration also supported.

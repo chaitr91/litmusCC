@@ -1,0 +1,27 @@
+ReadME for MongoDb Installation.
+
+1) sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+2) echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+3) sudo apt-get update
+4) sudo apt-get install -y mongodb-org
+5) sudo nano /etc/systemd/system/mongodb.service
+    Paste the following contents in the above file  -   
+
+
+[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+
+[Service]
+User=mongodb
+ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+
+[Install]
+WantedBy=multi-user.target
+
+6) sudo systemctl start mongodb
+7) sudo systemctl enable mongodb
+8) sudo systemctl status mongodb
+9) sudo systemctl enable mongodb
+
+The default port is :27017
