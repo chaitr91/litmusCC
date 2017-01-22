@@ -3,7 +3,7 @@
   "version":"0.0.1",
   "scripts": {
     "postinstall": "bower install",
-    "start": "node server/server.js | node node-mqtt/mqtt_broker.js | node node-mqtt/node_publisher.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "angular": "^1.6.1",
@@ -17,6 +17,10 @@
     "debug": "^2.2.0",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
+    "grunt": "~0.4.5",
+    "grunt-cli": "^1.2.0",
+    "grunt-concurrent": "~0.5.0",
+    "grunt-nodemon": "~0.3.0",
     "mosca":"^2.2.0",
     "mongoose": "^4.4.5",
     "morgan": "^1.7.0",
