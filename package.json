@@ -6,12 +6,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "angular": "^1.6.1",
+    "angular-bootstrap": "^0.12.2",
+    "angular-nvd3": "^1.0.9",
+    "bootstrap": "^3.3.7",
     "express": "^4.13.4",
+    "jquery": "^3.1.1",
     "mosca": "^2.2.0",
     "mqtt": "^2.2.1",
+    "nvd3": "^1.8.5",
     "passport-facebook": "^2.1.1",
     "passport-google": "^0.3.0",
     "passport-google-oauth": "^1.0.0",
     "passport-google-oauth2": "^0.1.6"
+
   }
 }
