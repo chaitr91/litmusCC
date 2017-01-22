@@ -11,8 +11,8 @@
   </div>
 </div>
 </div>
-<div class="omb_login">
-     <h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
+<div class="omb_login" style="padding-top:40px">
+    <div class="row"> <h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3></div>
    <div class="row omb_row-sm-offset-3 omb_socialButtons">
          <div class="col-xs-4 col-sm-2">
            <a href="/auth/facebook" class="btn btn-lg btn-block omb_btn-facebook">
@@ -40,10 +40,57 @@
        <span class="omb_spanOr">or</span>
      </div>
    </div>
+</div>
 
+
+<div style="padding-left:550px">
+<div ui-view></div>
+
+
+  <script type="text/ng-template" id="login.html">
+     <div class="col-md-6 col-md-6" style="">
+         <h3>Login Page</h3>
+
+      <form ng-submit="formSubmit()" class="form text-center">
+       <div class="row">
+        <div class="col-md-6 col-md-6">
+          <div><strong>Username:</strong></div>
+          <div class="form-group text-center">
+            <input type="text" class="form-control text-center" ng-model="username" placeholder="username" required=""/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6 col-md-6">
+            <div><strong>Password:</strong></div>
+            <div class="form-group text-center">
+            <input type="password" class="form-control text-center" ng-model="password" placeholder="password" required=""/>
+            </div>
          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6 col-md-6">
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-success center btn-block">Login</button>
+            <span class="text-danger text-center">{{ error }}</span>
+          </div>
+      </div>
 
+      </form>
+</div>
 
+  </script>
+
+  <script type="text/ng-template" id="home.html">
+    <div class="col-md-12">
+      <h3>Home Page</h3>
+
+      <a ui-sref="login">Back</a>
+    </div>
+  </script>
+</div>
+
+</div>
 
 
 
