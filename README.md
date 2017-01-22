@@ -10,6 +10,7 @@
 
 * npm install
 * grunt build
+* app runs at localhost:8080
 
 ### Dependencies ###
 * Important Note: Please Install mongodb running locally on Port No:27017;
