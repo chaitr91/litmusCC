@@ -1,0 +1,152 @@
+
+<html><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top &gt; .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom &gt; .tooltip-arrow,[uib-popover-popup].popover.top-left &gt; .arrow,[uib-popover-popup].popover.top-right &gt; .arrow,[uib-popover-popup].popover.bottom-left &gt; .arrow,[uib-popover-popup].popover.bottom-right &gt; .arrow,[uib-popover-popup].popover.left-top &gt; .arrow,[uib-popover-popup].popover.left-bottom &gt; .arrow,[uib-popover-popup].popover.right-top &gt; .arrow,[uib-popover-popup].popover.right-bottom &gt; .arrow,[uib-popover-html-popup].popover.top-left &gt; .arrow,[uib-popover-html-popup].popover.top-right &gt; .arrow,[uib-popover-html-popup].popover.bottom-left &gt; .arrow,[uib-popover-html-popup].popover.bottom-right &gt; .arrow,[uib-popover-html-popup].popover.left-top &gt; .arrow,[uib-popover-html-popup].popover.left-bottom &gt; .arrow,[uib-popover-html-popup].popover.right-top &gt; .arrow,[uib-popover-html-popup].popover.right-bottom &gt; .arrow,[uib-popover-template-popup].popover.top-left &gt; .arrow,[uib-popover-template-popup].popover.top-right &gt; .arrow,[uib-popover-template-popup].popover.bottom-left &gt; .arrow,[uib-popover-template-popup].popover.bottom-right &gt; .arrow,[uib-popover-template-popup].popover.left-top &gt; .arrow,[uib-popover-template-popup].popover.left-bottom &gt; .arrow,[uib-popover-template-popup].popover.right-top &gt; .arrow,[uib-popover-template-popup].popover.right-bottom &gt; .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+</head>
+
+<body ng-app="myApp" class="ng-scope">
+
+  <div ng-controller="connect" class="main-container">
+
+    <div class="row">
+      <nav style="background: #4a148c!important" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container pull-left orange in">
+          <div class="navbar-header">
+
+            <a "href="/#/" style="font-size: 30px !important;padding-left:20px;" class="navbar-brand">Litmus Automation</a>
+          </div>
+          <div>
+            <ul class="nav navbar-nav pull-right in">
+              <li class="dropdown"><a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle active" href="/#/">Signed in as  <span class="caret"></span></a>
+                <ul class="dropdown-menu in">
+                  <li><a href="/#/" class="active">Change Password</a></li>
+                  <li><a href="/#/" class="active">My Profile</a></li>
+                </ul>
+              </li>
+              <li class=""><a ng-controller="logoutController" ng-click='logout()'  class="active">Logout</a></li>
+              <li>
+              </ul>
+
+            </div>
+
+          </div>
+        </nav>
+      </div>
+
+      <div role="navigation" class="navbar-default sidebar in">
+        <div class="sidebar-nav navbar-collapse">
+          <ul id="side-menu" class="nav in">
+            <li>
+              <a href="/#/"><i class="fa fa-edit fa-fw"></i>DashBoard</a>
+            </li>
+            <li>
+              <a href="/#/"><i class="fa fa-edit fa-fw"></i>Editors</a>
+            </li>
+            <li class="active">
+              <a href="/#/"><i class="fa fa-bar-chart-o fa-fw"></i>Timeline<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+              <!-- /.nav-second-level -->
+            </li><li>
+              <a href="/#/" class="active"><i class="fa fa-wrench fa-fw"></i> Statistics<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li>
+                  <a href="/#/">Daily</a>
+                </li>
+                <li>
+                  <a href="/#/">Weekly</a>
+                </li>
+                <li>
+                  <a href="/#/">Monthly</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/#/" class="active"><i class="fa fa-files-o fa-fw"></i>Notifications<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li>
+                  <a href="/#/">Individual</a>
+                </li>
+                <li>
+                  <a href="/#/">Group</a>
+                </li>
+              </ul>
+              <!-- /.nav-second-level -->
+            </li>
+            <li>
+              <a href="/#/" class="active"><i class="fa fa-files-o fa-fw"></i>Maps<span class="glyphicon glyphicon glyphicon-menu-down pull-right"></span></a>
+              <a href="/#/">Work</a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li>
+                  <a href="/#/">Home</a>
+                </li>
+
+
+
+
+              </ul>
+              <!-- /.nav-second-level -->
+            </li>
+          </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+      </div>
+
+      <div style="min-height: 409px;" id="page-wrapper">
+        <div id="contextify-frame">
+        </div>
+        <div id="dashboard-frame">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="page-header" style="padding-top:20px">Dashboard</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+          </div>
+          <!-- /.row -->
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+
+              <div class="panel panel-primary">
+                <div class="panel-heading">Hello Litmus User!!!</div>
+                <div class="panel-body">Panel Can be Customized</div>
+              </div>  </div>
+              <div class="col-lg-3 col-md-6">
+
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Hello Litmus User!!!</div>
+                  <div class="panel-body">Panel Can be Customized</div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Hello Litmus User!!!</div>
+                  <div class="panel-body">Panel Can be Customized</div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Hello Litmus User!!!</div>
+                  <div class="panel-body">Panel Can be Customized</div>
+                </div>  </div>
+              </div>
+
+              <div class="panel panel-default" ng-controller="historicalBarChartCtrl">
+                <div class="panel-heading">
+                  <i class="fa fa-bar-chart-o fa-fw"></i><strong> Time-Series Visualization</strong>
+
+                </div>
+
+                <div ng-controller="historicalBarChartCtrl">
+                  <nvd3 options="options" data="data"></nvd3>
+                </div>
+
+
+              </div>
+              <!-- /.row -->
+              <!-- /.panel .chat-panel -->
+            </div>
+            <!-- /.col-lg-4 -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+
+      </body></html>

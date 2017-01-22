@@ -1,0 +1,87 @@
+<div class="main-container" ng-app="myApp" >
+  <di class="row">
+    <nav style="background: #4a148c!important" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container pull-left orange in">
+        <div class="navbar-header">
+
+          <a "href="#" style="font-size: 30px !important;padding-left:20px;" class="navbar-brand">Litmus Automation</a>
+        </div>
+      </div>
+    </div>
+    <div class="omb_login" style="padding-top:40px">
+      <div class="row"> <h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3></div>
+      <div class="row omb_row-sm-offset-3 omb_socialButtons">
+        <div class="col-xs-4 col-sm-2">
+          <a href="/auth/facebook" class="btn btn-lg btn-block omb_btn-facebook">
+            <i class="fa fa-facebook visible-xs"></i>
+            <span class="hidden-xs" >Facebook</span>
+          </a>
+        </div>
+        <div class="col-xs-4 col-sm-2">
+          <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+            <i class="fa fa-twitter visible-xs"></i>
+            <span class="hidden-xs">Twitter</span>
+          </a>
+        </div>
+        <div class="col-xs-4 col-sm-2">
+          <a href="#" class="btn btn-lg btn-block omb_btn-google">
+            <i class="fa fa-google-plus visible-xs"></i>
+            <span class="hidden-xs">Google+</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="row omb_row-sm-offset-3 omb_loginOr">
+        <div class="col-xs-12 col-sm-6">
+          <hr class="omb_hrOr">
+          <span class="omb_spanOr">or</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="padding-left:500px">
+
+
+
+      <div class="col-md-6 col-md-6" style="">
+        <h3>Login Page</h3>
+
+        <form  class="form" ng-submit="login()" class="form text-center">
+          <div class="row">
+            <div class="col-md-6 col-md-6">
+              <div><strong>Username:</strong></div>
+              <div class="form-group text-center">
+                <input type="text" class="form-control" name="username" ng-model="loginForm.username" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-md-6">
+              <div><strong>Password:</strong></div>
+              <div class="form-group text-center">
+                <input type="password" class="form-control" name="password" ng-model="loginForm.password" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-md-6">
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-success center btn-block ng-disabled="disabled">Login</button>
+                <span class="text-danger text-center">{{ errorMessage }}</span>
+              </div>
+            </div>
+          </div>
+          </form>
+
+        <div class="row">
+        <div class="col-md-6 col-md-6">
+          <div class="form-group text-center">
+            <div > New user ? </div>
+              <button class="btn btn-info center btn-block" ng-controller="registerController" ng-click="click()">Register</button>
+           </div>
+      </div>
+   </div>
+ </div>
+    </div>
+</div>

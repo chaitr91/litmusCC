@@ -1,0 +1,32 @@
+{
+  "name": "litmuscc",
+  "version":"0.0.1",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node server/server.js | node node-mqtt/mqtt_broker.js | node node-mqtt/node_publisher.js"
+  },
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-bootstrap": "^0.12.2",
+    "angular-nvd3": "^1.0.9",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.7",
+    "cookie-parser": "^1.4.1",
+    "d3": "^3.4.4",
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "mosca":"^2.2.0",
+    "mongoose": "^4.4.5",
+    "morgan": "^1.7.0",
+    "mqtt": "2.2.1",
+    "nvd3": "1.8.5",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-google-oauth2": "^0.1.6",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0"
+  }
+}
